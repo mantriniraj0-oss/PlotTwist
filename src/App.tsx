@@ -6,6 +6,7 @@ import { GeoMap } from './components/GeoMap';
 import { Projects } from './components/Projects';
 import { Reports } from './components/Reports';
 import { Cabinet } from './components/Cabinet';
+import { SystemSpecs } from './components/SystemSpecs';
 import { AuthOverlay } from './components/AuthOverlay';
 
 export default function App() {
@@ -25,6 +26,7 @@ export default function App() {
       {activeTab === 'projects' && <Projects isAdmin={authRole === 'admin'} />}
       {activeTab === 'reports' && <Reports />}
       {activeTab === 'cabinet' && <Cabinet isAdmin={authRole === 'admin'} />}
+      {activeTab === 'system-specs' && <SystemSpecs />}
 
       <BottomNav activeTab={activeTab} setActiveTab={setActiveTab} />
     </div>

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Route, CheckCircle2, AlertCircle, Circle, Zap, Info, Plus } from 'lucide-react';
+import { ProposalForm } from './ProposalForm';
 
 export function Projects({ isAdmin = false }: { isAdmin?: boolean }) {
   const { t } = useLanguage();
+  const [showForm, setShowForm] = useState(false);
   
   const [projects, setProjects] = useState([
     { id: '4B', tag: 'PKG-4B', tagColor: 'bg-tertiary-container text-on-tertiary-container', title: 'Vadodara-Mumbai Expressway', status: 'Critical Delay', statusColor: 'bg-secondary text-on-secondary animate-pulse', progress: 84.5, sec3A: 'done', sec3D: 'done', sec11: 'pending', sec19: 'none', alertIcon: AlertCircle, alertText: 'Forest Clearance Pending (Km 142)', alertColor: 'text-secondary' },
@@ -12,23 +14,7 @@ export function Projects({ isAdmin = false }: { isAdmin?: boolean }) {
 
   const handleAddProject = () => {
     if (!isAdmin) return;
-    const newProj = {
-      id: Math.random().toString(36).substr(2, 5),
-      tag: 'NEW-CORR',
-      tagColor: 'bg-surface-variant text-on-surface-variant',
-      title: 'New Project Corridor',
-      status: 'On Track',
-      statusColor: 'bg-surface-container text-on-surface',
-      progress: 0,
-      sec3A: 'pending',
-      sec3D: 'none',
-      sec11: 'none',
-      sec19: 'none',
-      alertIcon: Info,
-      alertText: 'Initial Draft Created',
-      alertColor: 'text-primary'
-    };
-    setProjects([newProj, ...projects]);
+    setShowForm(true);
   };
 
   const handleStatusChange = (id: string) => {
@@ -153,6 +139,7 @@ export function Projects({ isAdmin = false }: { isAdmin?: boolean }) {
           </div>
         ))}
       </div>
+      {showForm && <ProposalForm onClose={() => setShowForm(false)} />}
     </main>
   );
 }

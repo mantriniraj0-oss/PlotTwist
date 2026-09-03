@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayoutDashboard, Map, Building2, BarChart2, FolderOpen } from 'lucide-react';
+import { LayoutDashboard, Map, Building2, BarChart2, FolderOpen, Server } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const navItems = [
@@ -8,6 +8,7 @@ const navItems = [
   { id: 'projects', label: 'Projects', icon: Building2 },
   { id: 'reports', label: 'Reports', icon: BarChart2 },
   { id: 'cabinet', label: 'Cabinet', icon: FolderOpen },
+  { id: 'system-specs', label: 'System Specs', icon: Server },
 ];
 
 export function BottomNav({ activeTab, setActiveTab }: { activeTab: string, setActiveTab: (tab: string) => void }) {

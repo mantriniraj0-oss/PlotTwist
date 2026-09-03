@@ -1,7 +1,10 @@
 import React from 'react';
 import { Bell, Compass } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export function Header({ activeTab }: { activeTab: string }) {
+  const { toggleLanguage, language, t } = useLanguage();
+
   if (activeTab === 'overview') {
     return (
       <header className="fixed top-0 w-full z-40 pt-safe bg-surface border-b-2 border-outline">
@@ -12,15 +15,15 @@ export function Header({ activeTab }: { activeTab: string }) {
             </div>
             <div className="flex flex-col">
               <div className="flex items-center gap-1.5 leading-none">
-                <span className="font-headline font-bold text-primary text-base tracking-tight">PlotTwist</span>
-                <span className="text-[9px] font-bold font-headline tracking-wider uppercase px-1 py-0.5 bg-primary-container text-on-primary-container border border-outline">GOV</span>
+                <span className="font-headline font-bold text-primary text-base tracking-tight">{t('PlotTwist')}</span>
+                <span className="text-[9px] font-bold font-headline tracking-wider uppercase px-1 py-0.5 bg-primary-container text-on-primary-container border border-outline">{t('GOV')}</span>
               </div>
-              <span className="text-[10px] text-on-surface-variant font-semibold tracking-normal mt-0.5">राष्ट्रीय भूमि • Executive Portal</span>
+              <span className="text-[10px] text-on-surface-variant font-semibold tracking-normal mt-0.5">{t('राष्ट्रीय भूमि • Executive Portal')}</span>
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <button aria-label="Toggle language" className="h-8 px-2 bg-surface-container border-2 border-outline text-[11px] font-bold text-on-surface hover:bg-primary-container transition-colors flex items-center gap-1 shadow-[2px_2px_0px_#1a1a1a]">
-              <span>EN</span><span className="text-outline text-[10px] mx-1">|</span><span>हिं</span>
+            <button aria-label="Toggle language" onClick={toggleLanguage} className="h-8 px-2 bg-surface-container border-2 border-outline text-[11px] font-bold text-on-surface hover:bg-primary-container transition-colors flex items-center gap-1 shadow-[2px_2px_0px_#1a1a1a]">
+              <span className={language === 'en' ? 'text-primary' : ''}>EN</span><span className="text-outline text-[10px] mx-1">|</span><span className={language === 'hi' ? 'text-primary' : ''}>हिं</span>
             </button>
             <button aria-label="Notifications" className="w-8 h-8 bg-surface-container border-2 border-outline flex items-center justify-center text-on-surface relative hover:bg-primary-container transition-colors shadow-[2px_2px_0px_#1a1a1a]">
               <Bell size={16} />
@@ -31,23 +34,23 @@ export function Header({ activeTab }: { activeTab: string }) {
         <nav aria-label="Jurisdiction level" className="px-5 py-2.5 overflow-x-auto no-scrollbar flex items-center gap-1.5 border-t-2 border-outline bg-surface-container-low">
           <button className="flex items-center gap-1 px-3 py-1 bg-primary text-on-primary text-[11px] font-bold whitespace-nowrap border-2 border-outline shadow-[2px_2px_0px_#1a1a1a]">
             <span className="w-1.5 h-1.5 bg-primary-container border border-outline"></span>
-            <span>National</span>
+            <span>{t('National')}</span>
           </button>
           <span className="text-[14px] text-outline font-bold px-1">&gt;</span>
           <button className="px-2.5 py-1 bg-surface border border-outline text-on-surface hover:bg-surface-variant text-[11px] font-semibold whitespace-nowrap transition-colors">
-            State (28+8)
+            {t('State (28+8)')}
           </button>
           <span className="text-[14px] text-outline font-bold px-1">&gt;</span>
           <button className="px-2.5 py-1 bg-surface border border-outline text-on-surface hover:bg-surface-variant text-[11px] font-semibold whitespace-nowrap transition-colors">
-            District
+            {t('District')}
           </button>
           <span className="text-[14px] text-outline font-bold px-1">&gt;</span>
           <button className="px-2.5 py-1 bg-surface border border-outline text-on-surface hover:bg-surface-variant text-[11px] font-semibold whitespace-nowrap transition-colors">
-            Project Corridor
+            {t('Project Corridor')}
           </button>
           <span className="text-[14px] text-outline font-bold px-1">&gt;</span>
           <button className="px-2.5 py-1 bg-surface border border-outline text-on-surface hover:bg-surface-variant text-[11px] font-semibold whitespace-nowrap transition-colors">
-            Cadastral Parcel
+            {t('Cadastral Parcel')}
           </button>
         </nav>
       </header>
@@ -59,9 +62,12 @@ export function Header({ activeTab }: { activeTab: string }) {
       <div className="h-16 px-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Compass className="text-primary" size={28} />
-          <span className="font-headline font-bold text-xl tracking-tight text-primary uppercase">PlotTwist</span>
+          <span className="font-headline font-bold text-xl tracking-tight text-primary uppercase">{t('PlotTwist')}</span>
         </div>
         <div className="flex items-center gap-2">
+          <button aria-label="Toggle language" onClick={toggleLanguage} className="h-8 px-2 bg-surface-container border-2 border-outline text-[11px] font-bold text-on-surface hover:bg-primary-container transition-colors flex items-center gap-1 shadow-[2px_2px_0px_#1a1a1a]">
+            <span className={language === 'en' ? 'text-primary' : ''}>EN</span><span className="text-outline text-[10px] mx-1">|</span><span className={language === 'hi' ? 'text-primary' : ''}>हिं</span>
+          </button>
           <button className="w-10 h-10 flex items-center justify-center border-2 border-outline bg-surface-container-lowest shadow-[2px_2px_0px_#1a1a1a] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all">
             <Bell size={20} />
           </button>

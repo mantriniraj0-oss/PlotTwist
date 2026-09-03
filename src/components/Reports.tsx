@@ -1,19 +1,21 @@
 import React from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 import { FileBarChart2, FileText, Download } from 'lucide-react';
 
 export function Reports() {
+  const { t } = useLanguage();
   return (
     <main className="flex-1 w-full max-w-md mx-auto pt-20 pb-24 px-4 flex flex-col gap-6 relative z-10">
       <div className="flex flex-col gap-2">
         <div className="flex items-center justify-between">
-          <span className="font-label text-xs uppercase bg-primary text-on-primary px-2 py-0.5 font-bold tracking-wider">Financial & Statutory Intelligence</span>
-          <span className="font-label text-xs font-bold text-on-surface-variant">FY 2024-25 Q3</span>
+          <span className="font-label text-xs uppercase bg-primary text-on-primary px-2 py-0.5 font-bold tracking-wider">{t('Financial & Statutory Intelligence')}</span>
+          <span className="font-label text-xs font-bold text-on-surface-variant">{t('FY 2024-25 Q3')}</span>
         </div>
         <h1 className="font-headline font-bold text-4xl uppercase tracking-tight text-on-surface leading-none">
-          PlotTwist Portal
+          {t('PlotTwist Portal')}
         </h1>
         <p className="font-body text-sm text-on-surface-variant font-medium">
-          Master audit ledger, escrow liquidity, statutory milestones, and state-wise acquisition velocity indices.
+          {t('Master audit ledger, escrow liquidity, statutory milestones, and state-wise acquisition velocity indices.')}
         </p>
       </div>
 
@@ -21,15 +23,15 @@ export function Reports() {
         <div className="flex items-center justify-between border-b-2 border-outline pb-2">
           <div className="flex items-center gap-2">
             <FileBarChart2 className="text-primary" size={24} />
-            <h2 className="font-headline font-bold text-lg uppercase tracking-tight">R&R Statutory Milestones</h2>
+            <h2 className="font-headline font-bold text-lg uppercase tracking-tight">{t('R&R Statutory Milestones')}</h2>
           </div>
-          <span className="font-label text-xs bg-primary-container px-2 py-0.5 font-bold border border-outline">Active</span>
+          <span className="font-label text-xs bg-primary-container px-2 py-0.5 font-bold border border-outline">{t('Active')}</span>
         </div>
         <div className="flex flex-col gap-3">
           {[
-            { label: 'HOUSING REHABILITATION (8,420 Units)', progress: 84, color: 'bg-primary-container' },
-            { label: 'SKILL TRAINING & STIPEND (12,150 Beneficiaries)', progress: 92, color: 'bg-tertiary-container border-r-2 border-outline' },
-            { label: 'ANNUITY & SUSTENANCE PENSION (5-Yr Lock)', progress: 68, color: 'bg-secondary-container border-r-2 border-outline' }
+            { label: t('HOUSING REHABILITATION (8,420 Units)'), progress: 84, color: 'bg-primary-container' },
+            { label: t('SKILL TRAINING & STIPEND (12,150 Beneficiaries)'), progress: 92, color: 'bg-tertiary-container border-r-2 border-outline' },
+            { label: t('ANNUITY & SUSTENANCE PENSION (5-Yr Lock)'), progress: 68, color: 'bg-secondary-container border-r-2 border-outline' }
           ].map(mile => (
             <div key={mile.label} className="flex flex-col gap-1">
               <div className="flex justify-between text-xs font-bold font-label">
@@ -43,8 +45,8 @@ export function Reports() {
           ))}
         </div>
         <div className="bg-surface-container p-3 border-2 border-outline text-xs font-medium flex items-center justify-between mt-2">
-          <span>Next statutory audit deadline: <strong>31 Mar 2025</strong></span>
-          <button className="bg-primary text-on-primary px-3 py-1 font-headline uppercase font-bold text-xs border-2 border-outline">Verify</button>
+          <span>{t('Next statutory audit deadline:')} <strong>{t('31 Mar 2025')}</strong></span>
+          <button className="bg-primary text-on-primary px-3 py-1 font-headline uppercase font-bold text-xs border-2 border-outline">{t('Verify')}</button>
         </div>
       </div>
 
@@ -52,14 +54,14 @@ export function Reports() {
         <div className="flex items-center justify-between border-b-2 border-outline pb-2">
           <div className="flex items-center gap-2">
             <FileText className="text-primary" size={24} />
-            <h2 className="font-headline font-bold text-lg uppercase tracking-tight">Gazette & Dispatches</h2>
+            <h2 className="font-headline font-bold text-lg uppercase tracking-tight">{t('Gazette & Dispatches')}</h2>
           </div>
-          <span className="font-label text-xs uppercase font-bold text-tertiary">PDF Vault</span>
+          <span className="font-label text-xs uppercase font-bold text-tertiary">{t('PDF Vault')}</span>
         </div>
         <div className="flex flex-col gap-2">
           {[
-            { title: 'Official Gazette Notification #849-B', date: 'Published 14 Feb 2025 • 4.2 MB' },
-            { title: 'Grievance Redressal Quarterly Summary', date: 'Published 01 Feb 2025 • 2.8 MB' }
+            { title: t('Official Gazette Notification #849-B'), date: 'Published 14 Feb 2025 • 4.2 MB' },
+            { title: t('Grievance Redressal Quarterly Summary'), date: 'Published 01 Feb 2025 • 2.8 MB' }
           ].map((file, i) => (
             <div key={i} className="flex items-center justify-between p-3 bg-surface-bright border-2 border-outline hover:bg-surface-container-high transition-colors cursor-pointer">
               <div className="flex items-center gap-3">

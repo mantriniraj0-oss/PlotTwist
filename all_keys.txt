@@ -1,0 +1,126 @@
+Spatial Intelligence // Sector 04
+DGPS Live Feed
+Cadastral & Polygon Matrix
+Real-time vector boundary overlays, statutory stay tracking, and high-precision survey nodes.
+Acquired
+Hectares
+Pending
+Hotspots
+Critical Zones
+Cadastral Vector Map
+DGPS
+Stays
+Velocity
+High Risk
+Medium Risk
+Maps API Key Required
+Please provide the VITE_GOOGLE_MAPS_API_KEY environment variable to view the Cadastral Vector Map.
++
+Active Overlay: Cadastral Mesh v4.2
+Polygon Boundary Sync: 98.4% Verified
+Export GeoJSON
+Priority Hotspots & Stays
+Showing 3 of 14
+Sec 5A Dispute — Parcel #104
+Northern Peripheral Expressway Corridor
+Stay Active
+42.5 Ha
+Forest Block 7C Clearance
+Southern Ecologically Sensitive Zone
+Velocity: Low
+118.0 Ha
+Title Dispute — Plot #312
+Eastern Industrial Expansion Pocket
+Litigation
+19.3 Ha
+Area:
+Inspect Node
+Portfolio Control Center
+LIVE FEED
+Active Corridors & Projects
+Monitoring statutory land acquisition milestones, clearance velocity, and critical construction bottlenecks across national infrastructure.
+Active Length
+4,280 KM
+↑ 12% Q3 Target
+Clearance
+Physical Avg
+Bottlenecks
+Requires Action
+All Corridors (24)
+Expressways (8)
+Freight Corridors (6)
+Vadodara-Mumbai Expressway
+Critical Delay
+Eastern Dedicated Freight Corridor
+On Track
+Physical Clearance
+Sec 3A
+Sec 3D
+Sec 11
+Sec 19
+Expedite
+Financial & Statutory Intelligence
+FY 2024-25 Q3
+PlotTwist Portal
+Master audit ledger, escrow liquidity, statutory milestones, and state-wise acquisition velocity indices.
+R&R Statutory Milestones
+Active
+HOUSING REHABILITATION (8,420 Units)
+SKILL TRAINING & STIPEND (12,150 Beneficiaries)
+ANNUITY & SUSTENANCE PENSION (5-Yr Lock)
+Next statutory audit deadline:
+31 Mar 2025
+Verify
+Gazette & Dispatches
+PDF Vault
+Official Gazette Notification #849-B
+Grievance Redressal Quarterly Summary
+Cabinet Intelligence // Memorandums & Directives
+Cabinet & Policy
+Secure repository for official governmental land acquisition policies, executive memorandums, and signed cabinet notes.
+Active Notes
+In Circulation
+Cleared
+GoM Approved
+Sign-off
+Pending Review
+Secure Clearance Active
+Level-4 Authorized Session // PlotTwist Terminal #BG-88
+Directives & Memos
+Filter
+Export
+National Infrastructure Corridor Bill 2025
+URGENT
+Special Land Acquisition Amendment
+PENDING REVIEW
+R&R Exemption Guidelines 2025
+APPROVED
+Inspect
+PDF
+National Cadastral Sync Active
+Cabinet Executive Overview
+Unified Decision Support & Cadastral Monitoring per RFCTLARR statutory framework.
+Verify Khasra, Survey No. or Award ID...
+Total Land Acquired
+Sec. 11 Awarded
+Possessed & Handed Over
+Total Proposed Footprint
+across corridors
+Corridors
+Delayed
+Disbursed
+Families
+Resettled
+Vadodara-Mumbai Corridor #08
+Package 4B • 94% Clearance verified
+View Map
+Audited per RFCTLARR Act 2013
+National Land Records Modernization • Govt of India
+PlotTwist
+GOV
+राष्ट्रीय भूमि • Executive Portal
+National
+State (28+8)
+District
+Project Corridor
+Cadastral Parcel

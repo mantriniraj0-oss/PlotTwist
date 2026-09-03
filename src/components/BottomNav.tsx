@@ -1,5 +1,6 @@
 import React from 'react';
 import { LayoutDashboard, Map, Building2, BarChart2, FolderOpen } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const navItems = [
   { id: 'overview', label: 'Overview', icon: LayoutDashboard },
@@ -10,6 +11,8 @@ const navItems = [
 ];
 
 export function BottomNav({ activeTab, setActiveTab }: { activeTab: string, setActiveTab: (tab: string) => void }) {
+  const { t } = useLanguage();
+
   return (
     <nav className="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest border-t-2 border-outline">
       <div className="flex justify-around items-center h-16 px-1 max-w-md mx-auto">
@@ -25,7 +28,7 @@ export function BottomNav({ activeTab, setActiveTab }: { activeTab: string, setA
               }`}
             >
               <Icon size={20} className={isActive ? "stroke-[2.5]" : ""} />
-              <span className="font-label text-[9px] uppercase mt-0.5 tracking-tight">{item.label}</span>
+              <span className="font-label text-[9px] uppercase mt-0.5 tracking-tight">{t(item.label)}</span>
             </button>
           );
         })}
